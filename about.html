@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liza Ituze | About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      const redirectMap = {
+        'about.html': '#about',
+        'resume.html': '#resume',
+        'projects.html': '#projects',
+        'contact.html': '#contact',
+      };
+      const currentPage = window.location.pathname.split('/').pop().toLowerCase();
+      if (redirectMap[currentPage]) {
+        window.location.replace(`index.html${redirectMap[currentPage]}`);
+        return;
+      }
+
+      const storedTheme = localStorage.getItem('theme');
+      document.documentElement.dataset.theme = storedTheme || 'dark';
+    }());
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.svg?v=4" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="assets/logo.png?v=2">
+</head>
+<body data-page="about">
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="logo" href="index.html" aria-label="Go to home page">
+        <span class="logo-badge" aria-hidden="true">IL</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="primary-navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="resume.html">Resume</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12Zm0-15h-1.5V1.5h3V3H12Zm0 21h-1.5v-1.5h3V24H12ZM4.69 5.75 3.63 4.69l1.06-1.06 1.06 1.06L4.69 5.75Zm14.56 14.56-1.06-1.06 1.06-1.06 1.06 1.06-1.06 1.06ZM3 13.5H1.5v-3H3v3Zm21 0h-1.5v-3H24v3Zm-4.81-7.75-1.06-1.06 1.06-1.06 1.06 1.06-1.06 1.06ZM6.81 19.31l-1.06-1.06 1.06-1.06 1.06 1.06-1.06 1.06ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+        </svg>
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 15.5A9 9 0 0 1 8.5 3 7.5 7.5 0 1 0 21 15.5Z"/>
+        </svg>
+        <span class="sr-only">Toggle theme</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero section reveal">
+      <p class="eyebrow">About Me</p>
+      <h1>Biography</h1>
+      <p>
+        I am a software engineering student at African Leadership University focused on building polished digital experiences
+        that feel intuitive, accessible, and fast. I enjoy turning ideas into interfaces that solve real problems and make
+        everyday tasks easier.
+      </p>
+    </section>
+
+    <section class="content-grid section">
+      <article class="content-card reveal">
+        <h2>My Journey</h2>
+        <p>
+          My interest in software engineering started with curiosity about how websites are built and how design and code
+          work together. At African Leadership University, I have been developing my foundations in software engineering while
+          building interactive interfaces, learning how to structure projects, work with APIs, and think through user experience.
+        </p>
+      </article>
+      <article class="content-card reveal">
+        <h2>What Drives Me</h2>
+        <p>
+          I enjoy solving problems, improving layouts, and building interfaces that are both functional and visually strong.
+          I am especially drawn to frontend development because it combines creativity with technical precision.
+        </p>
+      </article>
+      <article class="content-card reveal full-width">
+        <h2>Frontend and Full-Stack Interest</h2>
+        <p>
+          My current focus is frontend engineering, but I also want to grow into full-stack development. I like working with
+          modern JavaScript tools, component-based UI, and server-side logic that powers reliable applications.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Liza Ituze. All rights reserved.</p>
+    <div class="social-links">
+      <a class="social-link" href="https://www.linkedin.com/in/ituze-liza" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4.98 3.5C4.98 4.88 3.93 6 2.3 6S-.38 4.88-.38 3.5 1.05 1 2.68 1s2.3 1.12 2.3 2.5Zm.02 4.5H1.96V23H5V8Zm4.8 0H7.08V23h2.7v-7.8c0-2.05.38-4.03 2.92-4.03 2.5 0 2.54 2.34 2.54 4.16V23h2.72v-8.33c0-4.08-.88-7.22-5.35-7.22-2.15 0-3.59 1.18-4.18 2.3h-.06V8Z"/>
+        </svg>
+        <span class="sr-only">LinkedIn</span>
+      </a>
+      <a class="social-link" href="https://github.com/lizaituze" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.1.68-.22.68-.48v-1.77c-2.78.62-3.37-1.22-3.37-1.22-.46-1.2-1.12-1.52-1.12-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.59 2.34 1.13 2.91.86.09-.67.35-1.13.63-1.39-2.22-.26-4.56-1.13-4.56-5.02 0-1.11.38-2.01 1-2.72-.1-.26-.43-1.3.1-2.71 0 0 .82-.27 2.7 1.04a9.02 9.02 0 0 1 4.9 0c1.88-1.31 2.7-1.04 2.7-1.04.53 1.41.2 2.45.1 2.71.62.71 1 1.61 1 2.72 0 3.9-2.35 4.75-4.58 5 .36.32.68.95.68 1.92v2.85c0 .27.18.59.69.48A10.28 10.28 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/>
+        </svg>
+        <span class="sr-only">GitHub</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
